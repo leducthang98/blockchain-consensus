@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  hackathon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hackathon-app
+    volumes:
+      - .:/app 
+    working_dir: /app
+    command: make run
